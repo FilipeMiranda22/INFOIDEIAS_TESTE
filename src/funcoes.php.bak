@@ -15,12 +15,7 @@ class Funcoes
 
      * */
     public function SeculoAno(int $ano): int {
-       $resultado = $ano/100;
-      if ((int) $resultado < $resultado){
-          return (int) ($ano/100 + 1);
-      }else{
-          return ((int) $resultado);
-      }
+        
     }
 
     
@@ -41,25 +36,8 @@ class Funcoes
     Número = 29 resposta = 23
 
      * */
-	 
-	# Função auxiliar para verificar se é um número primo.
-	
-	public function NumeroPrimo(int $numero){
-		for ($i = 2; $i < $numero; $i++){
-		  if ($numero % $i == 0){
-			  return false;
-		  }
-		}
-	return true;
-    }
-  
     public function PrimoAnterior(int $numero): int {
-        for ($i = $numero-1; $i > 0; $i--){
-          if (NumeroPrimo($i) == 1){
-              return $i;
-          }
-      }
-      return "Não possui numeros primos anteriores!";
+        
     }
 
 
@@ -88,22 +66,7 @@ class Funcoes
 
      * */
     public function SegundoMaior(array $arr): int {
-        $sizeArray = count($arr);
-        $maior = 0;
-        $segundoMaior = 0;
-        for ($i = 0; $i < $sizeArray; $i++){
-            $internArraySize = count($arr[$i]);
-            for ($j = 0; $j < $internArraySize; $j++){
-                if ($arr[$i][$j] > $maior){
-                    $segundoMaior = $maior;
-                    $maior = $arr[$i][$j];
-                }
-                else if($arr[$i][$j] > $segundoMaior){
-                    $segundoMaior = $arr[$i][$j];
-                }
-            }
-        }
-        return $segundoMaior;
+        
     }
 	
 	
@@ -143,26 +106,7 @@ class Funcoes
 
      * */
     
-	
-	public function EhCrescente($array){
-	  $sizeArray = count($array);
-	  for ($i = 0; $i < $sizeArray-1; $i++){
-		  if ($array[$i+1] <= $array[$i]){
-			return false;
-		  }
-	  }
-	  return true;
-	}
-	
-	public function SequenciaCrescente(array $arr): bool {
-        $sizeArray = count($arr);
-		for ($i = 0; $i < $sizeArray; $i++){
-		  $array_temp = $arr;
-		  unset($array_temp[$i]);
-		  if (EhCrescente(array_values($array_temp)) == true){
-			return true;
-		  }
-		}
-		return false;
+	public function SequenciaCrescente(array $arr): boolean {
+        
     }
 }
